@@ -15,7 +15,7 @@
 
   <!-- ===== En-tête ===== -->
   <header class="ip-header sticky-top">
-    <nav class="navbar navbar-expand-lg ip-container px-3">
+    <nav class="navbar navbar-expand-lg ip-inner">
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/logo.png" alt="Instant Parfait" class="ip-logo">
       </a>
@@ -46,13 +46,14 @@
     </nav>
   </header>
 
-  <main class="ip-container px-md-4">
+  <main>
 
     <!-- ===== Hero ===== -->
     <section class="ip-hero">
       <img src="assets/img/hero.png" alt="Couple de mariés souriants" class="ip-hero-img">
       <div class="ip-hero-overlay"></div>
 
+      <div class="ip-inner">
       <div class="ip-hero-content">
         <p class="ip-surtitre mb-2">Agence événementielle - Wedding planner</p>
         <h1 class="mb-3">Votre amour mérite<br>un <span class="text-gold">Instant Parfait.</span></h1>
@@ -79,10 +80,13 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- ===== A propos ===== -->
-    <section class="row align-items-center g-4 g-md-5 px-3 px-md-4 py-5 mx-0">
+    <section class="py-5">
+     <div class="ip-inner">
+     <div class="row align-items-center g-4 g-md-5">
       <div class="col-md-6">
         <img src="assets/img/apropos.png" alt="Table de réception décorée et alliances" class="img-fluid w-100 shadow-sm">
       </div>
@@ -106,10 +110,12 @@
           </div>
         </div>
       </div>
+     </div>
+     </div>
     </section>
 
     <!-- ===== Nos services ===== -->
-    <section id="services" class="bg-navy text-white text-center px-3 px-md-4 pt-4 pb-5">
+    <section id="services" class="bg-navy text-white text-center px-3 pt-5 pb-5">
       <h2 class="ip-titre">Nos services</h2>
       <p class="fw-medium fs-5 mt-2 mb-4">Des solutions sur-mesure pour un mariage qui vous ressemble</p>
 
@@ -136,9 +142,9 @@
     </section>
 
     <!-- ===== Nos réalisations ===== -->
-    <section class="text-center px-3 px-md-4 py-5">
+    <section class="ip-inner text-center py-5">
       <h2 class="ip-titre text-uppercase">Nos réalisations</h2>
-      <div class="row g-3 g-md-4 mt-3 px-lg-4">
+      <div class="row g-3 g-md-4 mt-3">
         <div class="col-6 col-md-3">
           <a href="realisations.html" class="ip-realisation"><img src="assets/img/realisation-1.png" alt="Arche de cérémonie face à la mer"></a>
         </div>
@@ -168,8 +174,9 @@
   </main>
 
   <!-- ===== Pied de page ===== -->
-  <footer class="ip-container px-md-4">
-    <div class="ip-footer bg-navy text-white row g-0 align-items-center py-4 px-3 mx-0">
+  <footer>
+   <div class="bg-navy text-white">
+    <div class="ip-inner ip-footer row g-0 align-items-center py-4">
       <div class="col-md-4 text-center text-md-start ps-md-4 mb-4 mb-md-0">
         <img src="assets/img/logo-footer.png" alt="Instant Parfait" class="ip-footer-logo">
       </div>
@@ -210,6 +217,7 @@
         </div>
       </div>
     </div>
+   </div>
     <p class="text-center small text-secondary py-3 mb-0">© <span id="annee"></span> Instant Parfait. Tous droits réservés.</p>
   </footer>
 
