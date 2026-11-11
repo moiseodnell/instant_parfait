@@ -552,6 +552,8 @@ section[id] { scroll-margin-top: 90px; }
 }
 .ip-presta {
   height: 100%;
+  overflow: hidden;                    /* l'arrondi s'applique à toute la carte */
+  border-top-right-radius: 3.5rem;
   background: #d9d9d9;
   color: var(--ip-navy);
 }
@@ -560,7 +562,6 @@ section[id] { scroll-margin-top: 90px; }
   width: 100%;
   aspect-ratio: 2 / 1;
   object-fit: cover;
-  border-top-right-radius: 2.5rem;
 }
 .ip-presta-texte { padding: 1rem 1.25rem 1.25rem; font-weight: 500; line-height: 1.35; }
 .ip-presta-texte h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: .2rem; }
@@ -569,7 +570,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 /* ---------- À propos ---------- */
-.ip-apropos-photo { width: 100%; border-top-right-radius: 4rem; }
+.ip-apropos-photo { display: block; width: 100%; border-top-right-radius: 4.5rem; }
 .ip-grand-titre {
   font-family: var(--ip-serif);
   font-weight: 700;
