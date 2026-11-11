@@ -1,0 +1,208 @@
+/* ==========================================================
+   Instant Parfait – styles personnalisés (complète Bootstrap)
+   ========================================================== */
+
+:root {
+  --ip-gold: #bb953e;
+  --ip-navy: #1c2d42;
+  --ip-bordeaux: #9c2838;
+  --ip-cacao: #3d2e20;
+  --ip-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --ip-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--ip-sans);
+  color: var(--ip-navy);
+  background: #fff;
+}
+
+.font-serif { font-family: var(--ip-serif); }
+.text-gold { color: var(--ip-gold) !important; }
+.text-navy { color: var(--ip-navy) !important; }
+.bg-navy { background-color: var(--ip-navy) !important; }
+
+/* Conteneur principal (largeur de la maquette) */
+.ip-container {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* ---------- Icônes SVG ---------- */
+.ip-icon { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+.ip-icon-lg { width: 1.9rem; height: 1.9rem; }
+.ip-icon-xl { width: 2.6rem; height: 2.6rem; }
+
+/* ---------- Boutons ---------- */
+.btn-gold,
+.btn-bordeaux {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #fff;
+  font-weight: 500;
+  border: 0;
+  transition: filter .2s, transform .2s;
+}
+.btn-gold { background: var(--ip-gold); }
+.btn-bordeaux { background: var(--ip-bordeaux); }
+.btn-gold:hover,
+.btn-bordeaux:hover {
+  color: #fff;
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* ---------- En-tête ---------- */
+.ip-header {
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(6px);
+}
+.ip-logo { height: 56px; width: auto; }
+
+.ip-header .nav-link {
+  font-size: .82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--ip-navy);
+  border-radius: 999px;
+  padding: .35rem .8rem !important;
+}
+.ip-header .nav-link:hover { color: var(--ip-gold); }
+.ip-header .nav-link.active {
+  background: var(--ip-gold);
+  color: #fff !important;
+}
+.ip-header .btn-devis {
+  font-size: .82rem;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: .35rem 1rem;
+}
+.navbar-toggler:focus { box-shadow: none; }
+
+/* ---------- Hero ---------- */
+.ip-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--ip-cacao);
+  color: #fff;
+  border-bottom: 2px solid var(--ip-gold);
+}
+.ip-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.ip-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 46, 32, .75);
+}
+.ip-hero-content {
+  position: relative;
+  max-width: 36rem;
+  padding: 3rem 1.5rem;
+}
+.ip-hero h1 {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.3;
+}
+.ip-hero .ip-surtitre {
+  font-size: .85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.ip-hero-atouts {
+  font-size: .72rem;
+  font-weight: 500;
+  max-width: 28rem;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+@media (min-width: 576px) {
+  .ip-hero-atouts { font-size: .85rem; }
+}
+
+/* Tablette et plus : photo à droite, dégradé à gauche */
+@media (min-width: 768px) {
+  .ip-hero-img { left: auto; width: 58%; }
+  .ip-hero-overlay {
+    background: linear-gradient(to right,
+      var(--ip-cacao) 40%,
+      rgba(61, 46, 32, .7) 50%,
+      transparent 75%);
+  }
+  .ip-hero-content { padding: 2.75rem 2rem; }
+}
+
+/* ---------- À propos ---------- */
+.ip-titre {
+  font-family: var(--ip-serif);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 3vw, 2rem);
+}
+.ip-apropos-texte {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.ip-apropos-atouts { font-weight: 500; }
+
+/* ---------- Services ---------- */
+.ip-service-card {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ip-navy);
+  border-radius: .75rem .75rem 0 0;
+  text-decoration: none;
+}
+.ip-service-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform .3s;
+}
+.ip-service-card:hover img { transform: scale(1.05); }
+.ip-service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.25;
+  padding: .5rem;
+  margin: 0;
+}
+
+/* ---------- Réalisations ---------- */
+.ip-realisation {
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.ip-realisation img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  transition: transform .3s;
+}
+.ip-realisation:hover img { transform: scale(1.05); }
+
+/* ---------- Pied de page ---------- */
+.ip-footer { font-size: .9rem; font-weight: 600; }
+.ip-footer a { color: #fff; text-decoration: none; }
+.ip-footer a:hover { color: var(--ip-gold); }
+.ip-footer-logo { width: 96px; height: 96px; border-radius: 50%; }
+.ip-social a { color: var(--ip-gold); transition: color .2s; }
+.ip-social a:hover { color: #fff; }
+
+@media (min-width: 768px) {
+  .ip-footer-contact {
+    border-left: 2px solid var(--ip-gold);
+    border-right: 2px solid var(--ip-gold);
+  }
+}
