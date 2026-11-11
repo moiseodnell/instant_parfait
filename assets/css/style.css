@@ -410,6 +410,7 @@ section[id] { scroll-margin-top: 90px; }
   transition: filter .2s, transform .2s;
 }
 .btn-whatsapp:hover { color: #fff; filter: brightness(1.08); transform: translateY(-2px); }
+.ip-fleche { display: block; margin: .25rem auto .75rem; }
 
 /* ---------- Réalisations : filtres et galerie ---------- */
 .ip-filtres {
