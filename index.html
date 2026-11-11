@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Instant Parfait</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">L'Instant Parfait</a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <h1>Chaque moment compte.</h1>
+      <p>Une petite phrase d'accroche pour présenter le site.</p>
+      <button id="cta" class="btn">Découvrir</button>
+      <p id="message" class="message" hidden></p>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Nos services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Service 1</h3>
+          <p>Courte description du premier service.</p>
+        </article>
+        <article class="card">
+          <h3>Service 2</h3>
+          <p>Courte description du deuxième service.</p>
+        </article>
+        <article class="card">
+          <h3>Service 3</h3>
+          <p>Courte description du troisième service.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+      <p id="form-retour" class="message" hidden></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="annee"></span> L'Instant Parfait</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
