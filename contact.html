@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts – Instant Parfait</title>
+  <meta name="description" content="Contactez Instant Parfait, wedding planner à Abidjan : formulaire, téléphone, e-mail et WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== En-tête ===== -->
+  <header class="ip-header sticky-top">
+    <nav class="navbar navbar-expand-lg ip-inner">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Instant Parfait" class="ip-logo">
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-last">
+        <a href="contact.html#formulaire" class="btn btn-bordeaux btn-devis d-none d-sm-inline-flex">
+          <svg class="ip-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+          Demander un devis
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav gap-lg-1 py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="a-propos.html">A propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Nos services</a></li>
+          <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+          <li class="nav-item"><a class="nav-link" href="temoignages.html">Témoignages</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
+          <li class="nav-item d-sm-none mt-2">
+            <a href="contact.html#formulaire" class="btn btn-bordeaux btn-devis w-100 justify-content-center">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Bannière ===== -->
+    <section class="ip-banner">
+      <img src="assets/img/banniere-contact.jpg" alt="Chaussures des mariés, bouquet et alliances">
+      <div class="ip-inner"><h1>Contacts</h1></div>
+    </section>
+
+    <!-- ===== Introduction ===== -->
+    <section class="ip-inner text-center pt-5">
+      <h2 class="ip-intro-titre">Parlons de votre <span class="text-gold">projet de mariage !</span></h2>
+      <p class="ip-intro-texte mt-4 mb-0">
+        Notre équipe est à votre écoute pour vous accompagner et donner vie à un mariage à votre image.
+      </p>
+      <div class="ip-separateur" aria-hidden="true"><svg viewBox="0 0 24 24" width="36" height="36"><defs><linearGradient id="or" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d27a"/><stop offset=".5" stop-color="#bb953e"/><stop offset="1" stop-color="#8a6a22"/></linearGradient></defs><path fill="url(#or)" d="M12 21s-7.5-4.6-9.6-9.2C.8 8.2 2.9 4 6.9 4c2.1 0 3.6 1.1 5.1 3 1.5-1.9 3-3 5.1-3 4 0 6.1 4.2 4.5 7.8C19.5 16.4 12 21 12 21Z"/></svg></div>
+    </section>
+
+    <!-- ===== Formulaire et coordonnées ===== -->
+    <section id="formulaire" class="ip-inner py-5">
+      <div class="row g-4 g-xl-5 justify-content-between">
+        <div class="col-lg-6">
+          <div class="ip-form-card">
+            <h2 class="d-flex align-items-center gap-2 mb-4"><svg class="ip-icon-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Envoyez-nous un message</h2>
+
+            <div id="form-contact-succes" class="alert alert-light d-none" role="status" tabindex="-1">
+              Merci <strong data-nom></strong>, votre message a bien été envoyé. Nous vous répondons très vite !
+            </div>
+
+            <form id="form-contact" class="d-flex flex-column gap-3" novalidate>
+              <div class="ip-champ">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1Z"/></svg>
+                <input type="text" class="form-control" name="nom" placeholder="Votre nom complet *" autocomplete="name" required aria-label="Votre nom complet">
+                <div class="invalid-feedback">Indiquez votre nom.</div>
+              </div>
+              <div class="ip-champ">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <input type="email" class="form-control" name="email" placeholder="Votre e-mail *" autocomplete="email" required aria-label="Votre e-mail">
+                <div class="invalid-feedback">Indiquez une adresse e-mail valide.</div>
+              </div>
+              <div class="ip-champ">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <input type="tel" class="form-control" name="telephone" placeholder="Votre téléphone *" autocomplete="tel" required aria-label="Votre téléphone">
+                <div class="invalid-feedback">Indiquez votre numéro de téléphone.</div>
+              </div>
+              <div class="ip-champ">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+                <select class="form-select" name="evenement" required aria-label="Type d'évènement">
+                  <option value="" selected disabled>Type d'évènement *</option>
+                  <option>Mariage</option>
+                  <option>Fiançailles</option>
+                  <option>Réception / décoration</option>
+                  <option>Autre évènement</option>
+                </select>
+                <div class="invalid-feedback">Choisissez un type d'évènement.</div>
+              </div>
+              <div class="ip-champ">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <textarea class="form-control" name="message" rows="4" placeholder="Votre message / précisions *" required aria-label="Votre message"></textarea>
+                <div class="invalid-feedback">Écrivez votre message.</div>
+              </div>
+              <button type="submit" class="btn btn-gold align-self-start px-4">Envoyer le message</button>
+            </form>
+          </div>
+
+          <h2 class="h5 fw-bold d-flex align-items-center justify-content-center gap-2 mt-4"><svg class="ip-icon-lg text-gold" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg> Nous trouver</h2>
+          <iframe class="ip-carte" src="https://maps.google.com/maps?q=Abidjan%2C%20C%C3%B4te%20d%27Ivoire&amp;z=11&amp;output=embed" title="Carte : Instant Parfait à Abidjan" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="ip-contact-card">
+            <h2 class="h5 fw-bold text-uppercase mb-4">Contacts</h2>
+            <ul class="ip-contact-liste list-unstyled d-flex flex-column gap-4 mb-4">
+              <li class="d-flex align-items-center gap-3"><svg class="ip-icon text-gold" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg> Abidjan, Côte d'Ivoire</li>
+              <li class="d-flex align-items-center gap-3"><svg class="ip-icon text-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+2250767058113">+225 07 67 05 81 13</a></li>
+              <li class="d-flex align-items-center gap-3"><svg class="ip-icon text-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> <a href="mailto:contact@instantparfait.ci" class="text-break">contact@instantparfait.ci</a></li>
+            </ul>
+            <hr>
+            <p class="text-center small mb-3">Suivez-nous</p>
+            <div class="ip-social d-flex justify-content-center gap-4">
+          <a href="#" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="28" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path fill="#1c2d42" d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Appel à l'action ===== -->
+    <section class="ip-cta-band">
+      <img src="assets/img/cta-roses.png" alt="" class="ip-cta-roses">
+      <div class="ip-cta-contenu">
+        <h2>Vous préférez une réponse rapide ?</h2>
+        <p class="mt-3">Écrivez-nous directement sur WhatsApp.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+          <a href="https://wa.me/2250767058113" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg"><svg class="ip-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></svg> Discuter sur WhatsApp</a>
+          <a href="temoignages.html#avis" class="btn btn-bordeaux btn-lg px-4 gap-3"><svg class="ip-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Laisser un témoignage</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pied de page ===== -->
+  <footer>
+   <div class="bg-navy text-white">
+    <div class="ip-inner ip-footer row g-0 align-items-center py-4">
+      <div class="col-md-4 text-center text-md-start ps-md-4 mb-4 mb-md-0">
+        <img src="assets/img/logo-footer.png" alt="Instant Parfait" class="ip-footer-logo">
+      </div>
+
+      <div class="col-md-4 ip-footer-contact px-md-4 mb-4 mb-md-0">
+        <h3 class="fs-6 fw-semibold mb-3 text-center text-md-start">Contact</h3>
+        <ul class="list-unstyled mx-auto mx-md-0 mb-0 d-flex flex-column gap-3" style="width: fit-content;">
+          <li class="d-flex align-items-center gap-3">
+            <svg class="ip-icon text-gold" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+            Abidjan, Côte d'Ivoire
+          </li>
+          <li class="d-flex align-items-center gap-3">
+            <svg class="ip-icon text-gold" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+2250767058113">+225 07 67 05 81 13</a>
+          </li>
+          <li class="d-flex align-items-center gap-3">
+            <svg class="ip-icon text-gold" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:weddingplanner@instantparfait.ci" class="text-break">weddingplanner@instantparfait.ci</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <h3 class="fs-6 fw-semibold mb-3">Suivez-nous</h3>
+        <div class="ip-social d-flex justify-content-center gap-4">
+          <a href="#" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="28" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path fill="#1c2d42" d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+   </div>
+    <p class="text-center small text-secondary py-3 mb-0">© <span id="annee"></span> Instant Parfait. Tous droits réservés.</p>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

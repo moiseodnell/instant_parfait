@@ -276,3 +276,332 @@ section[id] { scroll-margin-top: 90px; }
     border-right: 2px solid var(--ip-gold);
   }
 }
+
+/* ==========================================================
+   Pages intérieures
+   ========================================================== */
+
+/* ---------- Bannière de page ---------- */
+.ip-banner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: clamp(220px, 32vw, 440px);
+  background: var(--ip-navy);
+  color: #fff;
+}
+.ip-banner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ip-banner::before {               /* voile pour la lisibilité du titre */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to right, rgba(0, 0, 0, .55), rgba(0, 0, 0, .1) 60%, transparent);
+}
+.ip-banner .ip-inner { position: relative; z-index: 2; }
+.ip-banner h1 {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.65rem, 5vw, 3.6rem);
+  margin: 0;
+  display: inline-block;
+}
+.ip-banner h1::after {             /* soulignement doré */
+  content: "";
+  display: block;
+  width: min(240px, 60%);
+  height: 3px;
+  margin-top: .9rem;
+  background: var(--ip-gold);
+}
+.ip-banner--centre { text-align: center; }
+.ip-banner--centre::before { background: rgba(0, 0, 0, .25); }
+.ip-banner--centre h1::after { margin-inline: auto; }
+
+/* ---------- Introduction de page ---------- */
+.ip-intro-titre {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+}
+.ip-intro-sous-titre {
+  font-family: var(--ip-serif);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  max-width: 62rem;
+  margin-inline: auto;
+}
+.ip-intro-texte {
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+/* Séparateur avec cœur doré */
+.ip-separateur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  margin: 1.5rem auto 0;
+}
+.ip-separateur::before,
+.ip-separateur::after {
+  content: "";
+  width: min(240px, 30vw);
+  height: 3px;
+  background: var(--ip-gold);
+}
+.ip-separateur svg { width: 36px; height: 36px; }
+
+/* ---------- Bandeau d'appel à l'action ---------- */
+.ip-cta-band {
+  position: relative;
+  overflow: hidden;
+  background: #011c31;
+  color: #fff;
+  text-align: center;
+  padding: 3.5rem 1rem;
+}
+.ip-cta-band .ip-cta-roses {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: 30%;
+  object-fit: cover;
+  object-position: left bottom;
+  -webkit-mask-image: linear-gradient(to right, #000 75%, transparent);
+          mask-image: linear-gradient(to right, #000 75%, transparent);
+}
+.ip-cta-band .ip-cta-contenu { position: relative; max-width: 46rem; margin-inline: auto; }
+.ip-cta-band h2 {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+.ip-cta-band p { font-size: clamp(1rem, 1.6vw, 1.3rem); }
+.ip-cta-band--creme { background: #fcf2e8; color: var(--ip-navy); }
+@media (max-width: 767.98px) {
+  .ip-cta-band { padding-top: 9.5rem; }
+  .ip-cta-band .ip-cta-roses { top: 0; bottom: auto; height: 8.5rem; max-width: none; }
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .55rem 1.4rem;
+  border: 0;
+  text-decoration: none;
+  transition: filter .2s, transform .2s;
+}
+.btn-whatsapp:hover { color: #fff; filter: brightness(1.08); transform: translateY(-2px); }
+
+/* ---------- Réalisations : filtres et galerie ---------- */
+.ip-filtres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem 1.5rem;
+}
+.ip-filtre {
+  font-family: var(--ip-serif);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(.95rem, 1.8vw, 1.45rem);
+  color: var(--ip-navy);
+  background: none;
+  border: 0;
+  border-radius: .8rem;
+  padding: .3rem 1.1rem;
+  transition: background .2s, color .2s;
+}
+.ip-filtre:hover { color: var(--ip-bordeaux); }
+.ip-filtre.active { background: var(--ip-bordeaux); color: #fff; }
+
+.ip-galerie-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: none;
+  cursor: zoom-in;
+}
+.ip-galerie-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.ip-galerie-item:hover img { transform: scale(1.05); }
+.ip-galerie { animation: ip-fondu .35s ease; }
+@keyframes ip-fondu { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Contacts ---------- */
+.ip-form-card {
+  background: var(--ip-bordeaux);
+  color: #fff;
+  padding: 1.5rem;
+}
+.ip-form-card h2 { font-size: 1.35rem; font-weight: 700; }
+.ip-champ { position: relative; }
+.ip-champ > svg {
+  position: absolute;
+  left: .9rem;
+  top: .8rem;
+  width: 18px;
+  height: 18px;
+  color: var(--ip-gold);
+  pointer-events: none;
+  z-index: 1;
+}
+.ip-champ .form-control,
+.ip-champ .form-select {
+  padding-left: 2.6rem;
+  border-radius: .8rem;
+  border: 2px solid #f1d9a8;
+  font-weight: 600;
+  color: var(--ip-navy);
+}
+.ip-champ .form-control::placeholder { color: #8a8f98; }
+.ip-champ .form-control:focus,
+.ip-champ .form-select:focus {
+  border-color: var(--ip-gold);
+  box-shadow: 0 0 0 .2rem rgba(187, 149, 62, .35);
+}
+.ip-form-card .invalid-feedback { color: #ffd7dc; font-weight: 600; }
+
+.ip-carte {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: .5rem;
+  background: #e9ecef;
+}
+
+.ip-contact-card {
+  background: var(--ip-navy);
+  color: #fff;
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  font-weight: 700;
+}
+.ip-contact-card a { color: #fff; text-decoration: none; }
+.ip-contact-card a:hover { color: var(--ip-gold); }
+.ip-contact-card hr { border-color: rgba(255, 255, 255, .6); opacity: 1; }
+.ip-contact-liste { font-size: clamp(.95rem, 2.6vw, 1.25rem); }
+
+/* ---------- Témoignages ---------- */
+.ip-avis img {
+  width: 100%;
+  aspect-ratio: 337 / 274;
+  object-fit: cover;
+  border-radius: 1.25rem;
+}
+.ip-etoiles { display: flex; justify-content: center; gap: .35rem; color: var(--ip-gold); }
+.ip-etoiles svg { width: 34px; height: 34px; }
+.ip-avis blockquote { font-size: 1.15rem; line-height: 1.5; }
+.ip-avis .ip-trait { width: 140px; height: 3px; background: var(--ip-gold); margin: 1.5rem auto; }
+.ip-avis .ip-auteur { font-family: var(--ip-serif); font-weight: 700; font-size: 1.15rem; }
+.ip-note button { background: none; border: 0; padding: 0 .1rem; color: #ccc; }
+.ip-note button.on { color: var(--ip-gold); }
+.ip-note svg { width: 30px; height: 30px; }
+
+/* ---------- Nos services (page) ---------- */
+.ip-services-page {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #fdf3ea 0%, #feefe2 45%, #fbe3cb 100%);
+}
+.ip-services-page .ip-alliances {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  max-width: 760px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
+          mask-image: linear-gradient(to right, transparent, #000 30%);
+}
+.ip-services-page .ip-inner { position: relative; }
+.ip-titre-souligne::after {
+  content: "";
+  display: block;
+  width: 240px;
+  max-width: 60%;
+  height: 3px;
+  margin-top: .6rem;
+  background: var(--ip-gold);
+}
+.ip-presta {
+  height: 100%;
+  background: #d9d9d9;
+  color: var(--ip-navy);
+}
+.ip-presta img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-top-right-radius: 2.5rem;
+}
+.ip-presta-texte { padding: 1rem 1.25rem 1.25rem; font-weight: 500; line-height: 1.35; }
+.ip-presta-texte h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: .2rem; }
+@media (max-width: 767.98px) {
+  .ip-services-page .ip-alliances { position: static; width: 100%; -webkit-mask-image: none; mask-image: none; }
+}
+
+/* ---------- À propos ---------- */
+.ip-apropos-photo { width: 100%; border-top-right-radius: 4rem; }
+.ip-grand-titre {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+.ip-sous-titre-or {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  color: var(--ip-gold);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+}
+.ip-valeur {
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+  height: 100%;
+  border: 1px solid var(--ip-gold);
+  padding: .9rem 1rem;
+}
+.ip-valeur svg { width: 46px; height: 46px; flex-shrink: 0; color: var(--ip-gold); }
+.ip-valeur h3 { font-family: var(--ip-serif); font-weight: 700; font-size: 1.1rem; margin: 0; }
+.ip-valeur p { margin: 0; line-height: 1.3; }
+
+.ip-pourquoi { background: #0e1621; color: #fff; }
+.ip-pourquoi img { width: 100%; height: 100%; object-fit: cover; min-height: 280px; }
+.ip-pourquoi h2 {
+  font-family: var(--ip-serif);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  line-height: 1.15;
+}
+.ip-atout { display: flex; gap: .75rem; align-items: center; font-size: 1.05rem; line-height: 1.2; }
+.ip-atout svg { width: 34px; height: 34px; flex-shrink: 0; color: var(--ip-gold); }
